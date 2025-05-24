@@ -279,8 +279,8 @@ def run():
                     }
 
                     st.subheader("🔍 **Overview Data yang Akan Dikirim**")
-                    df_preview = pd.DataFrame([data_to_send])
-                    st.dataframe(df_preview, use_container_width=True)
+                    # df_preview = pd.DataFrame([data_to_send])
+                    # st.dataframe(df_preview, use_container_width=True)
                     
                     response = add_data_to_all(data_to_send)
                     if response.get("status") == "success":
