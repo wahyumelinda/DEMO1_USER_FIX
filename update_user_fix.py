@@ -160,12 +160,11 @@ def run():
                 }
 
 
-            res = update_data_to_all(data_to_send)
-            if res.get("status") == "success":
-                st.success("✅ Berhasil memperbarui data!")
-            else:
-                st.error("❌ Gagal memperbarui data: Tidak ada ID SPK yang dipilih")
+                res = update_data_to_all(data_to_send)
+                if res.get("status") == "success":
+                    st.success("✅ Berhasil memperbarui data!")
+                else:
+                    st.error("❌ Gagal memperbarui data: Tidak ada ID SPK yang dipilih")
 
     # else:
     #     st.warning("Tidak ada data yang tersedia untuk diupdate.")
-
