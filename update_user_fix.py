@@ -133,8 +133,8 @@ def run():
             st.info("ℹ️ Tidak memilih sparepart. Anda tetap bisa melanjutkan update.")
 
         if st.button("Update Data"):
-            if selesai <= mulai:
-                st.error("⚠ Pilih Jam Mulai dan Jam Selesai yang valid.")
+            if durasi_timedelta.total_seconds() == 0:
+                    st.error("⚠ Durasi tidak boleh 0. Periksa kembali jam mulai dan selesai.")
             else:
                 deskripsi = edited_df["Item"].tolist() if not edited_df.empty else []
                 quantity = edited_df["Quantity"].tolist() if not edited_df.empty else []
