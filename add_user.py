@@ -254,9 +254,9 @@ def run():
             quantities = edited_df['Quantity'].tolist() if selected_items else []
 
             if len(selected_items) == len(quantities):
-                if selesai <= mulai:
-                    st.error("⚠ Pilih Jam Mulai dan Jam Selesai yang valid.")
-                
+                if durasi_timedelta.total_seconds() == 0:
+                    st.error("⚠ Durasi tidak boleh 0. Periksa kembali jam mulai dan selesai.")
+
                 else :
                     delimiter = "||"
                     data_to_send = {
